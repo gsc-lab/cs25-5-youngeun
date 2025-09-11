@@ -59,9 +59,11 @@
                 return;
             }
 
+            // 모든 조건 통과 시 form 전송
             document.member_form.submit();
         }
 
+        // 입력값 초기화 함수 (취소하기 버튼)
         function reset_form() {
             document.member_form.id.value = "";
             document.member_form.pass.value = "";
@@ -80,9 +82,12 @@
         }
     </script>
     <div id="join_box">
+        <!-- form name="member_form" : script에서 참조할 폼 객체 -->
+        <!-- action="member_insert.php" : 입력값 전송될 PHP 파일 -->
         <form name="member_form" method="post" action="member_insert.php">
             <h2>회원 가입</h2>
 
+            <!-- 아이디 입력 + 중복확인 버튼 -->
             <div class="form id">
                 <div class="col1">아이디</div>
                 <div class="col2">
@@ -95,6 +100,7 @@
 
             <div class="clear"></div>
 
+            <!-- 비밀번호 입력 -->
             <div class="form">
                 <div class="col1">비밀번호</div>
                 <div class="col2">
@@ -104,6 +110,7 @@
 
             <div class="clear"></div>
 
+            <!-- 비밀번호 확인 -->
             <div class="form">
                 <div class="col1">비밀번호 확인</div>
                 <div class="col2">
@@ -113,6 +120,7 @@
 
             <div class="clear"></div>
 
+            <!--이름 입력-->
             <div class="form">
                 <div class="col1">이름</div>
                 <div class="col2">
@@ -122,6 +130,7 @@
 
             <div class="clear"></div>
 
+            <!-- 이메일 입력 -->
             <div class="form email">
                 <div class="col1">이메일</div>
                 <div class="col2">
@@ -133,9 +142,13 @@
 
             <div class="bottom_line"></div>
 
+            <!-- 저장, 취소 버튼 -->
             <div class="buttons">
+                <!-- 저장 버튼: check_input() 실행 -->
                 <img style="cursor:pointer" onclick="check_input()"
                     src="./img/button_save.gif">&nbsp;
+
+                <!-- 취소 버튼: reset_form() 실행 -->
                 <img id="reset_button" style="cursor:pointer"
                     src="./img/button_reset.gif" onclick="reset_form()">
             </div>
