@@ -124,8 +124,8 @@
 
             <!-- 버튼 -->
             <div class="buttons">
-                <img style="cursor:pointer" onclick="check_input()" src="./img/button_save.gif">&nbsp;
-                <img id="reset_button" style="cursor:pointer" src="./img/button_reset.gif" onclick="reset_form()">
+                <button type="button" onclick="check_input()">저장하기</button>
+                <button type="button" onclick="reset_form()">취소하기</button>
             </div>
         </form>
     </div>
