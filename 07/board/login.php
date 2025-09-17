@@ -1,10 +1,10 @@
 <?php
 
-// 사용자가 입력한 아이디와 비밀번호를 POST 방ㅇ식으로 전달받아 각각 $id와 $pass에 저장함
+// 사용자가 입력한 아이디와 비밀번호를 POST 방식으로 전달받아 각각 $id와 $pass에 저장함
 $id = $_POST['id'];
 $pass = $_POST['pass'];
 
-$con = mysqli_connect("localhost", "user1", "12345", "sample");
+$con = mysqli_connect("localhost", "user", "12345", "sample");
 $sql = "select * from members where id='$id'";
 $result = mysqli_query($con, $sql);
 
@@ -39,8 +39,9 @@ if (!$num_match) {
         $_SESSION["userpoint"] = $row["point"];
 
         echo ("
-        <script>
-        location.href = 'index.php';
-        </script>");
+              <script>
+                location.href = 'index.php';
+              </script>
+            ");
     }
 }
