@@ -7,26 +7,35 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./css/common.css">
     <link rel="stylesheet" type="text/css" href="./css/login.css">
-    <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript" src="login.js"></script>
 </head>
 
 <body>
-    <div id="login_box">
-        <div id="login_title">
-            <span>로그인</span>
+    <header>
+        <?php include "header.php"; ?>
+    </header>
+    <section>
+        <div id="main_img_bar">
         </div>
-        <div id="login_form">
-            <form name="login_form" method="post" action="login.php">
-                <ul>
-                    <li><input type="text" name="id" placeholder="아이디"></li>
-                    <li><input type="password" id="pass" name="pass" placeholder="비밀번호"></li>
-                </ul>
-                <div id="login_btn">
-                    <button type="button" onclick="check_input()">로그인</button>
+        <div id="main_content">
+            <div id="login_box">
+                <div id="login_title">
+                    <span>로그인</span>
                 </div>
-            </form>
-        </div>
-    </div>
+                <div id="login_form">
+                    <form name="login_form" method="post" action="login.php">
+                        <ul>
+                            <li><input type="text" name="id" placeholder="아이디"></li>
+                            <li><input type="password" id="pass" name="pass" placeholder="비밀번호"></li> <!-- pass -->
+                        </ul>
+                        <div id="login_btn">
+                            <a href="#"><img src="./img/login.png" onclick="check_input()"></a>
+                        </div>
+                    </form>
+                </div> <!-- login_form -->
+            </div> <!-- login_box -->
+        </div> <!-- main_content -->
+    </section>
 </body>
 
 </html>
