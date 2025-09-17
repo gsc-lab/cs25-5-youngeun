@@ -16,10 +16,10 @@ $regist_day = date("Y-m-d (H:i)");
 $con = mysqli_connect("localhost", "user", "12345", "sample");
 
 // 회원 정보를 members 테이블에 삽입하는 sql문
-$sql = "insert into members(id, pass, name, email, regist_day, level, point)";
+$sql = "insert into members(id, pass, name, email, regist_day)";
 
 // 실제 값들을 SQL문에 추가 
-$sql .= "values('$id', '$pass', '$name', '$email', '$regist_day', 9, 0)";
+$sql .= "values('$id', '$pass', '$name', '$email', '$regist_day')";
 
 
 // $sql에 저장된 명령 실행
